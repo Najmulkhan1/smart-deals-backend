@@ -93,7 +93,7 @@ const veryJWTToken = (req, res, next) => {
   
 }
 
-// const uri = "mongodb+srv://nazmul:3HOxWTBW19yE5pgL@cluster0.0zyxsoe.mongodb.net/?appName=Cluster0";
+
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.0zyxsoe.mongodb.net/?appName=Cluster0`;
 
 const client = new MongoClient(uri, {
