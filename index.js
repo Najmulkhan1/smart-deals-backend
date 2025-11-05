@@ -168,7 +168,7 @@ const run = async () => {
 
 
 
-    app.get('  ', async (req, res) => {
+    app.get('/latest-products', async (req, res) => {
       const cursor = dealsCollection.find().sort({
         created_at: -1
       }).limit(6)
@@ -258,8 +258,8 @@ const run = async () => {
       res.send(result)
     })
 
-    // await client.db("admin").command({ ping: 1 })
-    // console.log("Pinged your deployment. You successfully connected to MongoDB!");
+    await client.db("admin").command({ ping: 1 })
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
   }
   finally { }
 }
